@@ -27,5 +27,25 @@ public class Garnek {
             return "gotowanie bez soli";
         }
     }
+    public void gotujBezInformacji() {
+        wlaczGarnek();
+        gotujPrzez30min();
+        wylaczGarnek();
+    }
+
+    private void wlaczGarnek() {
+        System.out.println("wlaczenie garnka");
+    }
+    private void gotujPrzez30min() {
+        System.out.println("gotowanie przez 30 min");
+    }
+    private void wylaczGarnek() {
+        System.out.println("wylaczenie garnka");
+    }
+
+    public int temperaturaWrzeniaWody() {
+        return 100;
+    }
+
 }
 
