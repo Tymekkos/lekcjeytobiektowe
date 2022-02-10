@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.computer.Monitor;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,13 +18,23 @@ public class Main {
         System.out.println(temperatura);
 
         garnek.gotujBezInformacji();
-        */
+
         Uzytkownik lukasz = new Uzytkownik(20, "lukasz");
 
         if(lukasz.czyMozeKupicAlko()){
-            System.out.println("moze kupic alko");
+            System.out.println("moze kupic alkohol");
         }else{
-            System.out.println("nie moze kupic alko");
+            System.out.println("nie moze kupic alkoholu");
         }
+        */
+        Monitor monitor = new Monitor();
+        System.out.println(monitor.getResolution());
+
+        monitor.setLowResolution();
+        System.out.println(monitor.getResolution());
+
+        monitor.setSmokuResolution();
+        System.out.println(monitor.getResolution());
+
     }
 }
