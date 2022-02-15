@@ -1,5 +1,8 @@
 package com.company.computer;
 
+import com.company.computer.drive.Drive;
+import com.company.computer.usbdevice.USBDevice;
+
 import java.util.ArrayList;
 import java.util.List;
 

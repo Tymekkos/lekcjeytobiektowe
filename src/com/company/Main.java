@@ -1,6 +1,10 @@
 package com.company;
 
+import com.company.computer.Computer;
+import com.company.computer.File;
 import com.company.computer.Monitor;
+import com.company.computer.drive.HDDDrive;
+import com.company.computer.drive.SSDDrive;
 
 public class Main {
 
@@ -26,7 +30,7 @@ public class Main {
         }else{
             System.out.println("nie moze kupic alkoholu");
         }
-        */
+
         Monitor monitor = new Monitor();
         System.out.println(monitor.getResolution());
 
@@ -35,6 +39,13 @@ public class Main {
 
         monitor.setSmokuResolution();
         System.out.println(monitor.getResolution());
+        */
+        Monitor monitor = new Monitor();
+        HDDDrive hddDrive = new HDDDrive();
 
+        Computer computer = new Computer(monitor, hddDrive);
+
+        hddDrive.addFile(new File("slatt.jpg"));
+        hddDrive.listFiles();
     }
 }
