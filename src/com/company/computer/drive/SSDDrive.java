@@ -1,6 +1,6 @@
 package com.company.computer.drive;
 
-import com.company.computer.File;
+import com.company.computer.file.File;
 
 import java.util.Collection;
 import java.util.HashMap;
