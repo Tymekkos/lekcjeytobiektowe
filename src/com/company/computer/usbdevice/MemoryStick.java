@@ -27,6 +27,7 @@ public class MemoryStick implements USBDevice{
     }
 
     public void eject(){
+       System.out.println("ejecting memory stick");
        ejected = true;
     }
 

@@ -5,6 +5,8 @@ import com.company.computer.File;
 import com.company.computer.Monitor;
 import com.company.computer.drive.HDDDrive;
 import com.company.computer.drive.SSDDrive;
+import com.company.computer.usbdevice.MemoryStick;
+import com.company.computer.usbdevice.Mouse;
 
 public class Main {
 
@@ -45,7 +47,15 @@ public class Main {
 
         Computer computer = new Computer(monitor, hddDrive);
 
-        hddDrive.addFile(new File("slatt.jpg"));
-        hddDrive.listFiles();
+        //ddDrive.addFile(new File("slatt.jpg"));
+        //hddDrive.listFiles();
+        MemoryStick memoryStick = new MemoryStick("pendrive");
+        Mouse mouse = new Mouse("mysz");
+
+        computer.addUSBDevice(memoryStick);
+        computer.addUSBDevice(mouse);
+
+        computer.removeUSBDevice(memoryStick);
+        computer.removeUSBDevice(mouse);
     }
 }
