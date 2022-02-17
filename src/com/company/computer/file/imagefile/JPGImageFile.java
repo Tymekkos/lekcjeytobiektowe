@@ -3,31 +3,12 @@ package com.company.computer.file.imagefile;
 import com.company.computer.file.File;
 import com.company.computer.file.FileType;
 
-public class JPGImageFile implements File {
-    String name;
-    int size;
-    private final FileType fileType;
+public class JPGImageFile extends AbstractImageFile {
     int compression;
 
-    public JPGImageFile(String name, int size, FileType fileType, int compression) {
-        this.name = name;
-        this.size = size;
-        this.fileType = fileType;
+    public JPGImageFile(String name, int size, int compression) {
+        super(name, size);
         this.compression = compression;
-    }
-    @Override
-    public String getName() {
-        return null;
-    }
-
-    @Override
-    public int getSize() {
-        return 0;
-    }
-
-    @Override
-    public FileType getType() {
-        return null;
     }
 
     public int getCompression() {
