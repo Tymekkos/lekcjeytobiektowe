@@ -2,7 +2,13 @@ package com.company;
 
 import com.company.computer.Computer;
 import com.company.computer.Monitor;
+import com.company.computer.drive.Drive;
 import com.company.computer.drive.HDDDrive;
+import com.company.computer.drive.SSDDrive;
+import com.company.computer.file.File;
+import com.company.computer.file.imagefile.GIFImageFile;
+import com.company.computer.file.imagefile.JPGImageFile;
+import com.company.computer.file.musicfile.MP3MusicFile;
 import com.company.computer.usbdevice.MemoryStick;
 import com.company.computer.usbdevice.Mouse;
 
@@ -39,7 +45,7 @@ public class Main {
 
         monitor.setSmokuResolution();
         System.out.println(monitor.getResolution());
-        */
+
         Monitor monitor = new Monitor();
         HDDDrive hddDrive = new HDDDrive();
 
@@ -56,5 +62,19 @@ public class Main {
         memoryStick.eject();
         computer.removeUSBDevice(memoryStick);
         //computer.removeUSBDevice(mouse);
+        */
+        GIFImageFile gif1 = new GIFImageFile("nazwa1.gif", 100);
+        JPGImageFile jpg1 = new JPGImageFile("nazwa1.jpg", 200, 80);
+
+        MP3MusicFile mp3file = new MP3MusicFile("plik.mp3", 4000, "Black Country, New Road", "Ants From Up There", 100);
+
+        Drive drive = new HDDDrive();
+        drive.addFile(gif1);
+        drive.addFile(jpg1);
+        drive.addFile(mp3file);
+
+        drive.listFiles();
+        File file = drive.findFile("plik.mp3");
+        System.out.println(file.getSize());
     }
 }
